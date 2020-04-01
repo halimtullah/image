@@ -13,53 +13,98 @@
 <body>
     <hr>
    
-    <div class="container">
+    <div class="container-fluid">
         <div class="jumbotron">
-            <h1>AKAN NAMES</h1>
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h2>AKAN NAME GENERATOR</h2>
+                        <img src="image.jpeg/gh-flag.jpeg" width="800px">
+                        
+                            <h3>Introduction</h3>
+              
+                        <p> The Akan people are a historically important ethnic group of <em>West Africa</em>. With over 20 million members the Akans
+                            are one of the biggest Ethnic groups in West Africa today. <br>The Akan are the largest ethnic group in both Ghana and
+                            the Ivory Coast. They speak <em>kwa </em>languages which are part of the larger Niger-Congo family.</p>    
+                        
+                            <p> The Akan Names are derived from ghanian culture, where children are given names based on the days of the week.<p>
+                            <p>In West Africa, newborns are given <em> special names</em> depending on the day they are born. Diverse ethnicities 
+                                have variants and meanings as a symbol of cultural integrity and ancestral affiliation. </p>
+                            </div> 
+                            <div id="result">
+                          <!-- div responsible for desplaying results -->
+                          <div id="error" class="response">
+                              <h4> Please Enter your Birth Details</h4>
+                              <!--div responsible for displaying error message -->
+                              <form>
+                                <div class="form-row">
+                                    <!--allows for creation of an inline form -->
+                                    <div class="form-group col-md-1"></div>
+                                    <div class="form-group col-md-1 calendar">
+                                        <span class="input-group-addon" style="font-size:24px; color: rgb(64, 116, 212)"><i class="fa fa-calendar"></i></span>
+                                        <!-- adds calendar icon -->
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="dd"><b>Date</b></label>
+                                        <!--label for date input box-->
+                                        <input type="number" class="form-control" id="dd" placeholder="1" min="1" max="31" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mm"><b>Month</b></label>
+                                        <!--label for month input box -->
+                                        <select class="form-control" id="mm">
+                                            <!--creates a list of options to be selected from -->
+                                            <option>------</option>
+                                            <!--placeholder for month input box -->
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="yy"><b>Year</b></label>
+                                        <!--label for year input box-->
+                                        <input type="number" class="form-control" id="yy" placeholder="2020" min="1" max="2020" required>
+                                    </div>
+                                    <div class="form-group col-md-1"></div>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label class="label">What's your gender?</label>
+                                    <!--label for gender radios -->
+                                    <div class="rdio rdio-default">
+                                        <input type="radio" name="gender" id="male" value="Male">
+                                        <label for="male">&nbsp;&nbsp;<b>Male</b></label>
+                                    </div>
+                                    <div class="rdio rdio-default">
+                                        <input type="radio" name="gender" id="female" value="Female">
+                                        <label for="female">&nbsp;&nbsp;<b>Female</b></label>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <button type="submit" onclick="readData(); return false;" class="btn btn-primary btn-xs"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Get Akan Name</button>
+                                </div>
+                            </form>
+                        
+                          </div>
+                            </div>
+                        </div>
+            </div>
+            
         </div>
     
-    <div class="important">
-        <h2 class="important">Introduction</h2>
-    </div>   
-    <p class="important"> The Akan people are a historically important ethnic group of <em>West Africa</em>. With over 20 million members the Akans
-        are one of the biggest Ethnic groups in West Africa today. <br>The Akan are the largest ethnic group in both Ghana and
-        the Ivory Coast. They speak <strong>Kwa</strong> languages which are part of the larger Niger-Congo family.</p>    
     
-        <p> The Akan Names are derived from ghanian culture, where children are given names based on the days of the week.<p>
-        <p>In West Africa, newborns are given <em> special names</em> depending on the day they are born. Diverse ethnicities 
-            have variants and meanings as a symbol of cultural integrity and ancestral affiliation. </p>
-        </div> 
-        <div class="col-md6 right">
-            <div class="panel col-sm-6 offset-sm-3">
-                <div class="form-group top-form">
-                    <label for="century" class="labels"><strong>CENTURY</strong></label>
-                    <input type="number" class="form-control" placeholder="Enter the Century" id="ctry" name="Century">
-                </div>
-                <div class="form-group">
-                    <label for="year" class="labels"> <strong>YEAR</strong></label>
-                    <input type="number" placeholder="Enter the Year" class="form-control" id="yr" name="Year">
-
-                </div>
-                <div class="form-group">
-                    <label for="month" class="labels"> <strong>MONTH</strong></label>
-                    <input type="number" placeholder="Enter the Month" class="form-control" id="mnth" name="Month">
-                </div>
-                <div class="form-group">
-                    <label for="month" class="labels"> <strong>DAY</strong></label>
-                    <input type="number" placeholder="Enter the Day" class="form-control" id="dy" name="Day">
-                </div>
-
-                <form action="/action_page.php">
-                    <p><strong>Gender</strong></p>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                </div>
-            </div>
-        </div>   
-
     
+               
     
 </body>
 </html>

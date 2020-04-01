@@ -3,32 +3,24 @@ h1{
     font-family: Arial;
     text-align: left;
     color: #ffd700;
-    
+    font-style: italic;
     
 }
 .jumbotron {
-    background-image: url("/image.jpeg/akan2img.jpg");
-    display: right;
-    background-color: #fff;
-    height: 500px;
-    width: 800px;
-    background-position: inherit;
-    background-repeat: no-repeat;
-    background-size: innertia;
-    position: relative;
-    float: right;
+    background-color: #e3eafa;
+   padding: 0;
+   margin:0%;
+   border-radius: 0px;
+   float: right;
 }
+.container-fluid {
+    padding: 0;
+  }
 h2{
     font-style: italic;
     color: rgb(0, 217, 255);
 }   
  
-image {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 5px;
-        width: 150px;
-      }
 
 
 p{
